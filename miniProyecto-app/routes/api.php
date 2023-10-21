@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DocenteController;
+use App\Http\Controllers\AlumnoController;
 
 
 
@@ -22,5 +23,18 @@ Route::controller(DocenteController::class)->group(
         Route::post('/docente/{id}', 'store');
         Route::put('/docente/{id}', 'update');
         Route::delete('/docente/{id}', 'destroy');
+    }
+);
+
+
+
+Route::controller(AlumnoController::class)->group(
+
+    function () {
+        Route::get('/alumnos', 'index');
+        Route::get('/alumno/{id}','show');
+        Route::post('/alumno/{id}', 'store');
+        Route::put('/alumno/{id}', 'update');
+        Route::delete('/alumno/{id}', 'destroy');
     }
 );

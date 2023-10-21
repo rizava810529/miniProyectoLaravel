@@ -14,5 +14,8 @@ class DatabaseSeeder extends Seeder
     {
         $docenteSeeder = new DocenteSeeder();
 	    $docenteSeeder->run();
+
+        $alumnoSeeder = new AlumnoSeeder();
+	    $alumnoSeeder->run();
     }
 }
